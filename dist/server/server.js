@@ -86,72 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/server/indexTemplate.js":
-/*!*************************************!*\
-  !*** ./src/server/indexTemplate.js ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.indexTemplate = (content) => `<!DOCTYPE html>\r\n    <html lang=\"en\">\r\n        <head>\r\n        <meta charset=\"UTF-8\">\r\n        <title>Hello React </title>\r\n        <script src=\"static/client.js\" type=\"application/javascript\"></script>\r\n</head>\r\n    <body>\r\n    <div id=\"react_root\">${content}</div>\r\n    </body>\r\n</html>`;\r\n\n\n//# sourceURL=webpack:///./src/server/indexTemplate.js?");
-
-/***/ }),
-
 /***/ "./src/server/server.js":
 /*!******************************!*\
   !*** ./src/server/server.js ***!
   \******************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\r\nconst server_1 = __importDefault(__webpack_require__(/*! react-dom/server */ \"react-dom/server\"));\r\nconst header_1 = __webpack_require__(/*! ../shared/header */ \"./src/shared/header.jsx\");\r\nconst indexTemplate_1 = __webpack_require__(/*! ./indexTemplate */ \"./src/server/indexTemplate.js\");\r\nconst app = express_1.default();\r\napp.use('/static', express_1.default.static('./dist/client'));\r\napp.get('/', (req, res) => {\r\n    res.send(indexTemplate_1.indexTemplate(server_1.default.renderToString(header_1.Header())));\r\n});\r\nconst port = 3000;\r\napp.listen(port, () => {\r\n    console.log(\"server started on port: \" + port);\r\n});\r\n\n\n//# sourceURL=webpack:///./src/server/server.js?");
-
-/***/ }),
-
-/***/ "./src/shared/header.jsx":
-/*!*******************************!*\
-  !*** ./src/shared/header.jsx ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nfunction Header() {\r\n    return (React.createElement(\"header\", null,\r\n        React.createElement(\"h1\", null, \"Hello React!\")));\r\n}\r\nexports.Header = Header;\r\n\n\n//# sourceURL=webpack:///./src/shared/header.jsx?");
-
-/***/ }),
-
-/***/ "express":
-/*!**************************!*\
-  !*** external "express" ***!
-  \**************************/
-/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///external_%22express%22?");
-
-/***/ }),
-
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"react\");\n\n//# sourceURL=webpack:///external_%22react%22?");
-
-/***/ }),
-
-/***/ "react-dom/server":
-/*!***********************************!*\
-  !*** external "react-dom/server" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"react-dom/server\");\n\n//# sourceURL=webpack:///external_%22react-dom/server%22?");
+eval("throw new Error(\"Module build failed (from ./node_modules/ts-loader/index.js):\\nError: Debug Failure. False expression: Non-string value passed to `ts.resolveTypeReferenceDirective`, likely by a wrapping package working with an outdated `resolveTypeReferenceDirectives` signature. This is probably not a problem in TS itself.\\n    at Object.resolveTypeReferenceDirective (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:42537:18)\\n    at F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\servicesHost.js:373:77\\n    at F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\servicesHost.js:95:142\\n    at Array.map (<anonymous>)\\n    at Object.resolveTypeReferenceDirectives (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\servicesHost.js:95:125)\\n    at actualResolveTypeReferenceDirectiveNamesWorker (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:116674:163)\\n    at resolveTypeReferenceDirectiveNamesWorker (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:116974:26)\\n    at processTypeReferenceDirectives (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118456:31)\\n    at findSourceFileWorker (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118341:21)\\n    at findSourceFile (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118196:26)\\n    at F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118148:85\\n    at getSourceFileFromReferenceWorker (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118114:34)\\n    at processSourceFile (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118148:13)\\n    at processTypeReferenceDirectiveWorker (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118487:21)\\n    at processTypeReferenceDirective (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118472:13)\\n    at Object.createProgram (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:116777:21)\\n    at synchronizeHostData (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:165086:26)\\n    at Object.getProgram (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:165218:13)\\n    at successfulTypeScriptInstance (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\instances.js:178:80)\\n    at Object.getTypeScriptInstance (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\instances.js:34:12)\\n    at Object.loader (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\index.js:17:41)\");\n\n//# sourceURL=webpack:///./src/server/server.js?");
 
 /***/ })
 
