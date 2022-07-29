@@ -86,14 +86,94 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/server/indexTemplate.js":
+/*!*************************************!*\
+  !*** ./src/server/indexTemplate.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.indexTemplate = void 0;\r\nvar indexTemplate = function (content) {\r\n    return \"<!DOCTYPE html>\\n    <html lang=\\\"en\\\">\\n        <head>\\n        <meta charset=\\\"UTF-8\\\">\\n        <title>Hello React </title>\\n        <script src=\\\"static/client.js\\\" type=\\\"application/javascript\\\"></script>\\n</head>\\n    <body>\\n    <div id=\\\"react_root\\\">\".concat(content, \"</div>\\n    </body>\\n</html>\");\r\n};\r\nexports.indexTemplate = indexTemplate;\r\n\n\n//# sourceURL=webpack:///./src/server/indexTemplate.js?");
+
+/***/ }),
+
 /***/ "./src/server/server.js":
 /*!******************************!*\
   !*** ./src/server/server.js ***!
   \******************************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\r\nvar server_1 = __importDefault(__webpack_require__(/*! react-dom/server */ \"react-dom/server\"));\r\nvar header_1 = __webpack_require__(/*! ../shared/header */ \"./src/shared/header.jsx\");\r\nvar indexTemplate_1 = __webpack_require__(/*! ./indexTemplate */ \"./src/server/indexTemplate.js\");\r\nvar app = (0, express_1.default)();\r\napp.use('/static', express_1.default.static('./dist/client'));\r\napp.get('/', function (req, res) {\r\n    res.send((0, indexTemplate_1.indexTemplate)(server_1.default.renderToString((0, header_1.Header)())));\r\n});\r\nvar port = 3000;\r\napp.listen(port, function () {\r\n    console.log(\"server started on port: \" + port);\r\n});\r\n\n\n//# sourceURL=webpack:///./src/server/server.js?");
+
+/***/ }),
+
+/***/ "./src/shared/header.css":
+/*!*******************************!*\
+  !*** ./src/shared/header.css ***!
+  \*******************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/ts-loader/index.js):\\nError: Debug Failure. False expression: Non-string value passed to `ts.resolveTypeReferenceDirective`, likely by a wrapping package working with an outdated `resolveTypeReferenceDirectives` signature. This is probably not a problem in TS itself.\\n    at Object.resolveTypeReferenceDirective (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:42537:18)\\n    at F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\servicesHost.js:373:77\\n    at F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\servicesHost.js:95:142\\n    at Array.map (<anonymous>)\\n    at Object.resolveTypeReferenceDirectives (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\servicesHost.js:95:125)\\n    at actualResolveTypeReferenceDirectiveNamesWorker (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:116674:163)\\n    at resolveTypeReferenceDirectiveNamesWorker (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:116974:26)\\n    at processTypeReferenceDirectives (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118456:31)\\n    at findSourceFileWorker (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118341:21)\\n    at findSourceFile (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118196:26)\\n    at F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118148:85\\n    at getSourceFileFromReferenceWorker (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118114:34)\\n    at processSourceFile (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118148:13)\\n    at processTypeReferenceDirectiveWorker (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118487:21)\\n    at processTypeReferenceDirective (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:118472:13)\\n    at Object.createProgram (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:116777:21)\\n    at synchronizeHostData (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:165086:26)\\n    at Object.getProgram (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\typescript\\\\lib\\\\typescript.js:165218:13)\\n    at successfulTypeScriptInstance (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\instances.js:178:80)\\n    at Object.getTypeScriptInstance (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\instances.js:34:12)\\n    at Object.loader (F:\\\\WebStorm 2022.1.3\\\\prods\\\\HelloReact\\\\node_modules\\\\ts-loader\\\\dist\\\\index.js:17:41)\");\n\n//# sourceURL=webpack:///./src/server/server.js?");
+eval("// Exports\nmodule.exports = {\n\t\"example\": \"header__example--QgiVa\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/header.css?");
+
+/***/ }),
+
+/***/ "./src/shared/header.jsx":
+/*!*******************************!*\
+  !*** ./src/shared/header.jsx ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {\r\n    if (k2 === undefined) k2 = k;\r\n    var desc = Object.getOwnPropertyDescriptor(m, k);\r\n    if (!desc || (\"get\" in desc ? !m.__esModule : desc.writable || desc.configurable)) {\r\n      desc = { enumerable: true, get: function() { return m[k]; } };\r\n    }\r\n    Object.defineProperty(o, k2, desc);\r\n}) : (function(o, m, k, k2) {\r\n    if (k2 === undefined) k2 = k;\r\n    o[k2] = m[k];\r\n}));\r\nvar __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {\r\n    Object.defineProperty(o, \"default\", { enumerable: true, value: v });\r\n}) : function(o, v) {\r\n    o[\"default\"] = v;\r\n});\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (k !== \"default\" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);\r\n    __setModuleDefault(result, mod);\r\n    return result;\r\n};\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.Header = void 0;\r\nvar root_1 = __webpack_require__(/*! react-hot-loader/root */ \"react-hot-loader/root\");\r\nvar React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nvar header_css_1 = __importDefault(__webpack_require__(/*! ./header.css */ \"./src/shared/header.css\"));\r\nfunction HeaderComponent() {\r\n    return (React.createElement(\"header\", null,\r\n        React.createElement(\"h1\", { className: header_css_1.default.example }, \"Hello React\")));\r\n}\r\nexports.Header = (0, root_1.hot)(HeaderComponent);\r\n\n\n//# sourceURL=webpack:///./src/shared/header.jsx?");
+
+/***/ }),
+
+/***/ "express":
+/*!**************************!*\
+  !*** external "express" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///external_%22express%22?");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react\");\n\n//# sourceURL=webpack:///external_%22react%22?");
+
+/***/ }),
+
+/***/ "react-dom/server":
+/*!***********************************!*\
+  !*** external "react-dom/server" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react-dom/server\");\n\n//# sourceURL=webpack:///external_%22react-dom/server%22?");
+
+/***/ }),
+
+/***/ "react-hot-loader/root":
+/*!****************************************!*\
+  !*** external "react-hot-loader/root" ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react-hot-loader/root\");\n\n//# sourceURL=webpack:///external_%22react-hot-loader/root%22?");
 
 /***/ })
 
