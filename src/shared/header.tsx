@@ -12,4 +12,4 @@ function HeaderComponent() {
     );
 }
 
-export const Header = hot(HeaderComponent)
+export const Header = hot(HeaderComponent);

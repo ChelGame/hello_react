@@ -1,6 +1,7 @@
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
 const NODE_ENV = process.env.NODE_ENV;
+const GLOBAL_CSS_REGEXP = /\.global\.css/
 
 
 module.exports = {
@@ -33,10 +34,16 @@ module.exports = {
                             localIdentName:'[name]__[local]--[hash:base64:5]',
                         },
                         onlyLocals:true
-                    }
-
-                },]
-            }]
+                    },
+                    },
+                ],
+                exclude: GLOBAL_CSS_REGEXP,
+            },
+            {
+                test: GLOBAL_CSS_REGEXP,
+                use: ['style-loader', 'css-loader'],
+            },
+        ]
     },
     optimization: {
         minimize: false
