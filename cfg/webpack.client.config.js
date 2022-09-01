@@ -11,10 +11,10 @@ function setupDevtool(){
     if(IS_DEV) return 'eval';
     if(IS_PROD) return false;
 }
-module.exports= {
+module.exports = {
     resolve:{
         extensions:[
-            '.js', '.jsx', '.ts', 'tsx', 'json'
+            '.js', '.jsx', '.ts', '.tsx', '.json'
         ],
         alias:{
             'react-dom':IS_DEV ? '@hot-loader/react-dom':'react-dom'
