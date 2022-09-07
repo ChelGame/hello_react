@@ -42,7 +42,7 @@ module.exports = {
             },
             {
                 test: GLOBAL_CSS_REGEXP,
-                use: ['style-loader', 'css-loader'],
+                use: ['css-loader'],
             },
         ]
     },
