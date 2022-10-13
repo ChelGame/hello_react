@@ -1,20 +1,18 @@
 import React, {useState} from 'react';
 import styles from './dropdown.css';
-import {assignId, generateId, generateRandomString} from "../../../../utils/react/generateRandomIndex";
+import {generateId} from "../../../../utils/react/generateRandomIndex";
 
 interface IDropdownProps {
-  button: React.ReactNode;
-  children: React.ReactNode;
+    button: React.ReactNode;
+    children: React.ReactNode;
 }
 
 export function Dropdown({button, children}: IDropdownProps) {
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   return (
-    <div>
-      <div onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-        { button }
-      </div>
-      {isDropdownOpen && (
+    <div onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+        {button}
+        {isDropdownOpen && (
           <div>
             <div onClick={() => {
               setIsDropdownOpen(false);
@@ -22,7 +20,7 @@ export function Dropdown({button, children}: IDropdownProps) {
               { children }
             </div>
           </div>
-      )}
+        )}
     </div>
   );
 }
@@ -35,10 +33,3 @@ function useIsMounted() {
         }, [])
     return [isMounted];
 }
-
-const List = [
-    {value: "Просмотренное"      , icon: "/src/img/icon.png"},
-    {value: "Сохраненное"        , icon: "/src/img/icon.png"},
-    {value: "Мои посты"          , icon: "/src/img/icon.png"},
-    {value: "Прокомментированное", icon: "/src/img/icon.png"},
-].map(generateId);

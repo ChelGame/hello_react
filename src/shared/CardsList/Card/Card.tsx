@@ -4,15 +4,6 @@ import {Controls} from "./Controls";
 import {Menu} from "./Menu";
 import {Preview} from "./Preview";
 import {TextContent} from "./TextContent";
-import {Dropdown} from "./Dropdown";
-import {generateId} from "../../../utils/react/generateRandomIndex";
-import {MyList} from "../../GenericList/GenericList";
-const List = [
-    {value: "Просмотренное"      , icon: "/src/img/icon.png"},
-    {value: "Сохраненное"        , icon: "/src/img/icon.png"},
-    {value: "Мои посты"          , icon: "/src/img/icon.png"},
-    {value: "Прокомментированное", icon: "/src/img/icon.png"},
-].map(generateId);
 
 export function Card() {
   return (
@@ -21,9 +12,6 @@ export function Card() {
           <Preview />
           <Menu />
           <Controls />
-          <Dropdown button={<button>Test</button>}>
-              <MyList list={List}/>
-          </Dropdown>
       </li>
   );
 }
