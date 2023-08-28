@@ -1,9 +1,11 @@
 import React, {ReactElement, ReactNode} from "react";
+import {Icon} from "../Icons/Icon";
 
 interface IItem {
     id: string;
     value: string;
     icon?: string;
+    className?: string;
 }
 
 interface IMyListProps {
@@ -15,8 +17,8 @@ export function List ({ list }: IMyListProps) {
         <ul>
             {
                 list.map((item, index) => (
-                    <li key={item.id}>
-                        {list[index].icon}
+                    <li className={(item.className) ? item.className : ""} key={item.id}>
+                        {(item.icon !== undefined) ? <Icon name={item.icon} size={[12, 12]}/> : ""}
                         {item.value}
                     </li>
                 ))

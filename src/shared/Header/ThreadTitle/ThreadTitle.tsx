@@ -1,8 +1,12 @@
 import React from 'react';
 import styles from './threadtitle.css';
 
-export function ThreadTitle() {
-  return (
-    <h1 className={styles.threadTitle}>Header</h1>
-  );
+interface IThreadProps {
+    header: string;
+}
+
+export function ThreadTitle(props: IThreadProps) {
+    return (
+        <h1 className={styles.threadTitle}>{props.header}</h1>
+    );
 }

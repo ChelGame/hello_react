@@ -1,8 +1,16 @@
+.header {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 @media all and (min-width: 1024px) {
     .header {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
         padding: 40px;
     }
 }

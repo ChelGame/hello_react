@@ -28,10 +28,42 @@
 }
 
 .closeButton {
-    background-color: var(--greyD9);
+    width: 100%;
+
     padding: 12px 23px;
     border-radius: 0 0 3px 3px;
-    width: 100%;
+
+    background-color: var(--greyD9);
+
+    text-align: center;
+    color: var(--grey66);
+}
+
+.firstItem, .secondItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 0 20px;
+    padding: 11px 0;
+
+    color: var(--grey99);
+}
+
+.firstItem {
+    border-bottom: 1px solid var(--greyEC);
+}
+
+.firstItem div {
+    display: flex;
+
+    margin-right: 6px;
+}
+
+.secondItem div {
+    display: flex;
+
+    margin-right: 4px;
 }
 
 @media all and (min-width: 1024px) {

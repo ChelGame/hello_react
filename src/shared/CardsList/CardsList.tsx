@@ -14,12 +14,12 @@ const List = [
     {value: "Прокомментированное", icon: "/src/img/icon.png"},
 ].map(generateId);
 
-export function CradsList() {
+export function CardsList() {
     return (
           <ul className={styles.cardsList}>
-              {/*<Dropdown>*/}
-              {/*    <MyList list={List}/>*/}
-              {/*</Dropdown>*/}
+              <Dropdown button={<button disabled></button>}>
+                  <MyList list={List}/>
+              </Dropdown>
               <Card />
           </ul>
     );

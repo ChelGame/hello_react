@@ -1,0 +1,20 @@
+.menuContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 14px;
+    border-radius: 0 0 7px 7px;
+
+    background-color: var(--white);
+}
+
+
+@media (min-width: 1024px) {
+    .menuContainer {
+        order: 2;
+        width: auto;
+        background-color: transparent;
+    }
+}
