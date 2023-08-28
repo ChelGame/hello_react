@@ -1,7 +1,7 @@
-const webpack = require('webpack')
-const [webpackClientConfig, webpackServerConfig] = require('../webpack.config')
-const nodemon = require('nodemon')
-const path = require('path')
+const webpack = require('webpack');
+const [webpackClientConfig, webpackServerConfig] = require('../webpack.config');
+const nodemon = require('nodemon');
+const path = require('path');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const express = require('express');
