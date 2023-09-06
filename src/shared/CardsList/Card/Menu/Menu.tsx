@@ -4,7 +4,8 @@ import {generateId} from "../../../../utils/react/generateRandomIndex";
 import {Dropdown} from "../Dropdown";
 import {List} from "../../../List/List";
 import {MenuIcon} from "../../../Icons";
-import {Icon} from "../../../Icons/Icon";
+import Icon from "../../../../utils/react/Icon";
+
 
 const ItemList = [
     {value: "Скрыть"      , icon: "HideIcon", className: styles.firstItem},
@@ -17,7 +18,7 @@ export function Menu() {
       <div className={styles.menu}>
           <Dropdown button={
               <button className={styles.menuButton}>
-                  <Icon name={'MenuIcon'} size={[12, 12]}/>
+                  <Icon width="12 14" name={'mail'} />
               </button>}>
               <div className={styles.dropdown}>
                   <List list={ItemList}></List>

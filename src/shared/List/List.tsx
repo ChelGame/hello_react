@@ -1,5 +1,5 @@
 import React, {ReactElement, ReactNode} from "react";
-import {Icon} from "../Icons/Icon";
+import Icon from "../../utils/react/Icon";
 
 interface IItem {
     id: string;
@@ -18,7 +18,7 @@ export function List ({ list }: IMyListProps) {
             {
                 list.map((item, index) => (
                     <li className={(item.className) ? item.className : ""} key={item.id}>
-                        {(item.icon !== undefined) ? <Icon name={item.icon} size={[12, 12]}/> : ""}
+                        {(item.icon !== undefined) ? <Icon name={item.icon} width={12} /> : ""}
                         {item.value}
                     </li>
                 ))

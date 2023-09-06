@@ -4,15 +4,17 @@ import {hot} from "react-hot-loader/root";
 import {Header} from "./shared/Header";
 import {Layout} from "./shared/Layout";
 import {Content} from "./shared/Content";
-import {CradsList} from "./shared/CardsList";
+import {CardsList} from "./shared/CardsList";
+import Icon from "./utils/react/Icon";
 
 function AppComponent() {
     return (
         <Layout>
             <Header />
             <Content>
-                <CradsList />
+                <CardsList />
             </Content>
+            {/*<Icon name="mail" />*/}
         </Layout>
     );
 }

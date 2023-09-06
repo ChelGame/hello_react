@@ -6,6 +6,7 @@ import {Dropdown} from "./Card/Dropdown";
 import {generateId} from "../../utils/react/generateRandomIndex";
 import {Simulate} from "react-dom/test-utils";
 import contextMenu = Simulate.contextMenu;
+import Icon from "../../utils/react/Icon";
 
 const List = [
     {value: "Просмотренное"      , icon: "/src/img/icon.png"},
@@ -21,6 +22,7 @@ export function CardsList() {
                   <MyList list={List}/>
               </Dropdown>
               <Card />
+              {/*<Icon name="MenuIcon"/>*/}
           </ul>
     );
 }
