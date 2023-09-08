@@ -1,12 +1,20 @@
+.karmaCounter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-.karmaCounter > * + * {
-    padding: 0 0 0 4px;
+.karmaCounter button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .karmaValue {
     color: var(--greyC4);
     font-size: 12px;
     line-height: 14px;
+    margin: 0 6px;
 }
 
 .down {

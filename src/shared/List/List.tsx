@@ -6,6 +6,7 @@ interface IItem {
     value: string;
     icon?: string;
     className?: string;
+    size?: number | [number,number];
 }
 
 interface IMyListProps {
@@ -18,7 +19,7 @@ export function List ({ list }: IMyListProps) {
             {
                 list.map((item, index) => (
                     <li className={(item.className) ? item.className : ""} key={item.id}>
-                        {(item.icon !== undefined) ? <Icon name={item.icon} width={12} /> : ""}
+                        {(item.icon !== undefined) ? <Icon name={item.icon} size={item.size || undefined} /> : ""}
                         {item.value}
                     </li>
                 ))

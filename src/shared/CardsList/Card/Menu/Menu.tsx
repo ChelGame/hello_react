@@ -8,8 +8,8 @@ import Icon from "../../../../utils/react/Icon";
 
 
 const ItemList = [
-    {value: "Скрыть"      , icon: "HideIcon", className: styles.firstItem},
-    {value: "Пожаловаться", icon: "DangerIcon", className: styles.secondItem},
+    {value: "Скрыть"      , icon: "hide", className: styles.firstItem, size: 12},
+    {value: "Пожаловаться", icon: "danger", className: styles.secondItem, size: [14, 12] as [number, number]},
     {value: "Закрыть", className: styles.closeButton},
 ].map(generateId);
 
@@ -18,7 +18,7 @@ export function Menu() {
       <div className={styles.menu}>
           <Dropdown button={
               <button className={styles.menuButton}>
-                  <Icon width="12 14" name={'mail'} />
+                  <Icon name={'menu'} size={25} />
               </button>}>
               <div className={styles.dropdown}>
                   <List list={ItemList}></List>

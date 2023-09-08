@@ -9,10 +9,10 @@ import contextMenu = Simulate.contextMenu;
 import Icon from "../../utils/react/Icon";
 
 const List = [
-    {value: "Просмотренное"      , icon: "/src/img/icon.png"},
-    {value: "Сохраненное"        , icon: "/src/img/icon.png"},
-    {value: "Мои посты"          , icon: "/src/img/icon.png"},
-    {value: "Прокомментированное", icon: "/src/img/icon.png"},
+    {value: "Просмотренное"      , icon: ""},
+    {value: "Сохраненное"        , icon: ""},
+    {value: "Мои посты"          , icon: ""},
+    {value: "Прокомментированное", icon: ""},
 ].map(generateId);
 
 export function CardsList() {

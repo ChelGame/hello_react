@@ -14,7 +14,6 @@ function AppComponent() {
             <Content>
                 <CardsList />
             </Content>
-            {/*<Icon name="mail" />*/}
         </Layout>
     );
 }
