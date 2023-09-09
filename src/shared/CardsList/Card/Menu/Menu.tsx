@@ -7,10 +7,18 @@ import {MenuIcon} from "../../../Icons";
 import Icon from "../../../../utils/react/Icon";
 
 
-const ItemList = [
+const MobileItemList = [
     {value: "Скрыть"      , icon: "hide", className: styles.firstItem, size: 12},
     {value: "Пожаловаться", icon: "danger", className: styles.secondItem, size: [14, 12] as [number, number]},
     {value: "Закрыть", className: styles.closeButton},
+].map(generateId);
+const DesktopItemList = [
+    {value: "Комментарии" , icon: "desktopComment", className: styles.desktopMenuIconCon, iconClassName: styles.desktopMenuIcon},
+    {value: "Поделиться"  , icon: "desktopShare"  , className: styles.desktopMenuIconCon, iconClassName: styles.desktopMenuIcon},
+    {value: "Скрыть"      , icon: "hide"          , className: styles.desktopMenuIconCon, iconClassName: styles.desktopMenuIcon},
+    {value: "Сохранить"   , icon: "desktopSave"   , className: styles.desktopMenuIconCon, iconClassName: styles.desktopMenuIcon},
+    {value: "Пожаловаться", icon: "danger"        , className: styles.desktopMenuIconCon, iconClassName: styles.desktopMenuIcon},
+    {value: "Закрыть"     , className: styles.closeButton},
 ].map(generateId);
 
 export function Menu() {
@@ -18,10 +26,13 @@ export function Menu() {
       <div className={styles.menu}>
           <Dropdown button={
               <button className={styles.menuButton}>
-                  <Icon name={'menu'} size={25} />
+                  <Icon name={'menu'} className={styles.menuIcon}/>
               </button>}>
-              <div className={styles.dropdown}>
-                  <List list={ItemList}></List>
+              <div className={styles.mobileDropdown}>
+                  <List list={MobileItemList}></List>
+              </div>
+              <div className={styles.desktopDropdown}>
+                  <List list={DesktopItemList}></List>
               </div>
           </Dropdown>
       </div>

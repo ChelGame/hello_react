@@ -18,9 +18,11 @@ const List = [
 export function CardsList() {
     return (
           <ul className={styles.cardsList}>
-              <Dropdown button={<button disabled></button>}>
-                  <MyList list={List}/>
-              </Dropdown>
+              {/*<Dropdown button={<button></button>}>*/}
+              {/*    <MyList list={List}/>*/}
+              {/*</Dropdown>*/}
+              <Card />
+              <Card />
               <Card />
               {/*<Icon name="MenuIcon"/>*/}
           </ul>

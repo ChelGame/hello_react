@@ -31,6 +31,12 @@
     border-bottom-left-radius: 30px;
 }
 
+.searchIcon {
+    --size: 11px;
+    width: var(--size);
+    height: var(--size);
+}
+
 @media (min-width: 1024px) {
     .searchBlock, .search, .searchBut {
         background-color: var(--white);
@@ -38,5 +44,14 @@
     .searchBlock {
         order: 2;
         margin: 0 30px;
+        padding: 16px 0;
+    }
+
+    .searchBut {
+        padding: 0 10px 0 27px;
+    }
+
+    .searchIcon {
+        --size: 19px;
     }
 }
