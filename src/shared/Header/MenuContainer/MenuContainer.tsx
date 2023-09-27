@@ -9,7 +9,7 @@ const genAvatar = "https://sun9-west.userapi.com/sun9-52/s/v1/ig2/8GxLSMUxbvqwui
 export function MenuContainer() {
     return (
         <div className={styles.menuContainer}>
-            <UserBlock avatar={genAvatar} name={"Константин"}/>
+            <UserBlock />
             <SearchBlock />
             <MessageBlock />
         </div>

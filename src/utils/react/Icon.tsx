@@ -21,7 +21,7 @@ const Icon: React.FC<IconProps> = ({ name, size = 24, className, onClick }) => {
         let defaultHeight = SvgIcon.toString().match(/height: \d+ ?/)[0].split(" ")[1];
 
         return (
-            <div style={{width: `${width}px`, height: `${height}px`}} className={`iconCon ${className || ""}`}>
+            <div  className={`iconCon ${className || ""}`}>
                 <SvgIcon
                     className={`icon ${className || ""}`}
                     onClick={onClick}

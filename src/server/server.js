@@ -13,6 +13,13 @@ app.get('/', (req, res) => {
        indexTemplate(ReactDOM.renderToString(App())),
    )
 });
+
+app.get('/auth', (req, res) => {
+    // res.query.get('code');
+   res.send(
+       indexTemplate(ReactDOM.renderToString(App())),
+   )
+});
 const port = 3000;
 app.listen(port, () => {
     console.log("server started on port: " + port);
